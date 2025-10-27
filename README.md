@@ -20,6 +20,7 @@ Application de gestion de prospects, pens√©e pour accompagner les demandeurs d‚Ä
 - Validation
 - Spring Boot devtools
 - Lombok
+- Hibernate
 
 ## Lancement
 
