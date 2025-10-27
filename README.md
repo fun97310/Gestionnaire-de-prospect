@@ -1,8 +1,17 @@
 # Gestionnaire-de-prospect
 Application de gestion de prospects, pensée pour accompagner les demandeurs d’emploi dans l’organisation et le suivi de leurs démarches, en leur offrant un outil simple et efficace pour piloter leur recherche.
 
+## Prérequis
 
-# Dépendance du projet 
+- Java 25 installé
+
+## Installation
+
+- Cloner le dépôt
+- Lancer la base de données PostgreSQL avec Docker Compose (voir docker-compose.yml)
+- Configurer les paramètres dans 'application.properties'
+
+## Dépendance du projet 
 
 - Spring web
 - Spring Data JPA
@@ -11,3 +20,8 @@ Application de gestion de prospects, pensée pour accompagner les demandeurs d�
 - Validation
 - Spring Boot devtools
 - Lombok
+
+## Lancement
+
+Lancer l’application avec :  
+./mvnw spring-boot:run
