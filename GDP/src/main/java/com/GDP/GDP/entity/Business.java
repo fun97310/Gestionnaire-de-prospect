@@ -1,6 +1,8 @@
 package com.GDP.GDP.entity;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import jakarta.persistence.*;
 
 @Entity
@@ -22,6 +24,10 @@ public class Business {
     @ManyToOne
     @JoinColumn(name="user_id", nullable=false)
     private User user;
+
+    @OneToMany(mappedBy="business", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Professional> professionalsList = new ArrayList<>();
+
 
     // Getters and Setters
 
@@ -65,6 +71,12 @@ public class Business {
         this.user = user;
     }
 
+    public List<Professional> getProfessionals(){
+        return professionalsList;
+    }
 
+    public void setProfessionals(List<Professional> professionalsList){
+        this.professionalsList = professionalsList;
+    }
 }
 
