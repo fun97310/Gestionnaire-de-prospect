@@ -15,6 +15,10 @@ public class JobOffer {
     @Column(nullable=false)
     private String link;
 
+    @ManyToOne
+    @JoinColumn(name="business_id", nullable=false)
+    private Business business;
+
     // Getters and Setters
     public Long getId(){
         return id;
@@ -38,5 +42,13 @@ public class JobOffer {
 
     public void setLink(String link){
         this.link = link;
+    }
+
+    public Business getBusiness(){
+        return business;
+    }
+
+    public void setBusiness(Business business){
+        this.business = business;
     }
 }

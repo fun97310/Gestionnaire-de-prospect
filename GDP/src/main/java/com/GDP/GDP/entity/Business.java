@@ -28,6 +28,9 @@ public class Business {
     @OneToMany(mappedBy="business", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Professional> professionalsList = new ArrayList<>();
 
+    @OneToMany(mappedBy="business", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<JobOffer> jobOffersList = new ArrayList<>();
+
 
     // Getters and Setters
 
@@ -77,6 +80,14 @@ public class Business {
 
     public void setProfessionals(List<Professional> professionalsList){
         this.professionalsList = professionalsList;
+    }
+
+    public List<JobOffer> getJobOffersList(){
+        return jobOffersList;
+    }
+
+    public void setJobOffersList(List<JobOffer> jobOffersList){
+        this.jobOffersList = jobOffersList;
     }
 }
 
