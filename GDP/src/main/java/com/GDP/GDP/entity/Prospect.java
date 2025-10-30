@@ -20,6 +20,14 @@ public abstract class Prospect {
     @ElementCollection
     private List<LocalDateTime> historyOfRelaunches = new ArrayList<>();
 
+    public Prospect(){}
+    
+    public Prospect(LocalDateTime initialApplicationDate, LocalDateTime dateRelaunch, List<LocalDateTime> historyOfRelaunches){
+        this.initialApplicationDate = initialApplicationDate;
+        this.dateRelaunch = dateRelaunch;
+        this.historyOfRelaunches = historyOfRelaunches;
+    }
+        
     // Getters and Setters
     public Long getId(){
         return id;

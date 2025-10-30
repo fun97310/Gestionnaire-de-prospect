@@ -25,6 +25,15 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Business> businesses = new ArrayList<>();
 
+    public User() {
+    }
+
+    public User(String pseudo, String email, String password) {
+        this.pseudo = pseudo;
+        this.email = email;
+        this.password = password;
+    }
+
     // Getters and Setters
 
     public Long getId() {

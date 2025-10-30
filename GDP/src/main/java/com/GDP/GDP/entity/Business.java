@@ -31,7 +31,14 @@ public class Business {
     @OneToMany(mappedBy="business", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<JobOffer> jobOffersList = new ArrayList<>();
 
-
+    public Business() {
+    }
+    public Business(String name, String description, String recruitmentServiceContact, User user) {
+        this.name = name;
+        this.description = description;
+        this.recruitmentServiceContact = recruitmentServiceContact;
+        this.user = user;
+    }
     // Getters and Setters
 
     public Long getId() {

@@ -22,6 +22,14 @@ public class JobOffer {
     @OneToOne(mappedBy="offer")
     private Application application;
 
+    public JobOffer(){
+    }
+    public JobOffer(String name, String link, Business business) {
+        this.name = name;
+        this.link = link;
+        this.business = business;
+    }
+
     // Getters and Setters
     public Long getId(){
         return id;

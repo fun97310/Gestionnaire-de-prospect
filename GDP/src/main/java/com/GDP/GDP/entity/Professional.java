@@ -25,6 +25,17 @@ public class Professional {
     @JoinColumn(name="business_id", nullable=false)
     private Business business;
 
+    public Professional(){
+    }
+
+    public Professional(String lastName, String firstName, String job, String contact, Business business) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.job = job;
+        this.contact = contact;
+        this.business = business;
+    }
+
     // Getters and Setters
 
     public Long getId(){
