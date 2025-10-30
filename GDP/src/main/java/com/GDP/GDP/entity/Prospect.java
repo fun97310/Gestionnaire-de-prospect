@@ -11,8 +11,10 @@ public abstract class Prospect {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable=false)
     private LocalDateTime initialApplicationDate;
 
+    @Column(nullable=true)
     private LocalDateTime dateRelaunch;
 
     @ElementCollection
