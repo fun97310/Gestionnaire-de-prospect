@@ -19,6 +19,9 @@ public class JobOffer {
     @JoinColumn(name="business_id", nullable=false)
     private Business business;
 
+    @OneToOne(mappedBy="offer")
+    private Application application;
+
     // Getters and Setters
     public Long getId(){
         return id;
@@ -50,5 +53,13 @@ public class JobOffer {
 
     public void setBusiness(Business business){
         this.business = business;
+    }
+
+    public Application getApplication(){
+        return application;
+    }
+
+    public void setApplication(Application application){
+        this.application = application;
     }
 }
